@@ -1,4 +1,6 @@
-# How to test the app
+# slider Testimonials basic app with JS
+
+## How to test the app
 
 - download the repository by using this command or click on the download zip button under the "code" drop down menu
   ```
@@ -10,3 +12,9 @@
 ## Here's a demo
 
 ![DEMO](Demo-reel.gif)
+
+## Functionality
+
+- A surprise me button that generates a random number to show a random review
+- The 2 prev and next buttons
+- Auto sliding capability coming soon
