@@ -9,4 +9,4 @@
 
 ## Here's a demo
 
-![DEMO](Demo (online-video-cutter.com).gif)
+![DEMO](Demo-reel.gif)
