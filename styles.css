@@ -22,9 +22,7 @@ img {
   border-radius: 100%;
 }
 
-button {
-  border: none;
-  cursor: pointer;
+i {
   font-size: 18px;
   background-color: #9dbc98;
   width: 20px;
@@ -50,4 +48,18 @@ h4 {
 
 footer {
   margin-top: 60px;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.surprise {
+  margin: 20px;
+  padding: 5px 8px;
+  border: 4px solid #ebd9b4;
+  border-radius: 10px;
+  background-color: #3d57cc;
+  color: #ebd9b4ee;
 }

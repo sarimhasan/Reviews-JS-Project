@@ -41,13 +41,14 @@ const text = document.querySelector("#info");
 
 const prevBtn = document.querySelector(".prev-btn");
 const nextBtn = document.querySelector(".next-btn");
+const surpriseBtn = document.querySelector(".surprise");
 
 // Setting the innitial counter
-let currentItem = Math.trunc(Math.random() * reviews.length - 1);
+let currentItem = 0;
 
 // function for displaying the according information
-function displayingInfo() {
-  const item = reviews[currentItem];
+function displayingInfo(itemNo) {
+  const item = reviews[itemNo];
   img.src = item.img;
   name.textContent = item.name;
   job.textContent = item.job;
@@ -56,7 +57,7 @@ function displayingInfo() {
 
 // Innitially loading an image
 window.addEventListener("DOMContentLoaded", function () {
-  displayingInfo();
+  displayingInfo(currentItem);
 });
 
 // Activating the sliders
@@ -65,11 +66,11 @@ nextBtn.addEventListener("click", function () {
 
   if (currentItem > reviews.length - 2) {
     currentItem = 0;
-    displayingInfo();
+    displayingInfo(currentItem);
     // console.log(currentItem);
   } else {
     currentItem++;
-    displayingInfo();
+    displayingInfo(currentItem);
     // console.log(currentItem);
   }
 });
@@ -79,11 +80,19 @@ prevBtn.addEventListener("click", function () {
 
   if (currentItem < 1) {
     currentItem = 3;
-    displayingInfo();
+    displayingInfo(currentItem);
     // console.log(currentItem);
   } else {
     currentItem--;
-    displayingInfo();
+    displayingInfo(currentItem);
     // console.log(currentItem);
   }
+});
+
+// Surprise me Button
+surpriseBtn.addEventListener("click", function () {
+  const randItemNo = Math.trunc(Math.random() * reviews.length);
+  console.log(randItemNo);
+
+  displayingInfo(randItemNo);
 });
